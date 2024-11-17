@@ -1,0 +1,50 @@
+ship Microservice
+    shipId: number
+    Starting_point: string
+    destination_port: string 
+    capacity: number
+    via_ports: string[]
+    type: string
+    date: date
+
+    Database: mongoDB
+
+Product Microservice    
+    weight: number
+    type_needed: string
+    boarding: string
+    destination: string
+    allocation_ports: string[]
+
+    Database: mongoDB
+
+Entering a Product- Check for each allocation_ports for the Product:
+                    now for each route check for ships in that route 
+                    check if the ship has capacity
+
+                    checking the capacity:
+                    total_variable: total_weight- weight of products travelling full route {total weight available for via ports}
+                    
+                    if a new request comes:
+
+                    check for earliest ship:
+                    if route = full 
+                        if(total_variable-current > 0) {
+                            total_variable -= current;
+                        }
+                        else{
+                            check for next earliest ship
+                        }
+                    else{
+                        if(total_variable-current>0){
+                            if 
+                        }
+                    }
+                    
+                    
+                    
+
+
+
+
+
